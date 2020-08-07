@@ -27,7 +27,7 @@ public class AppController {
     }
 
     @PostMapping(value = "/randomfood", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<> retrieveFood(@RequestBody FoodQuery foodQuery) {
+    public ResponseEntity retrieveFood(@RequestBody FoodQuery foodQuery) {
         if (foodQuery.getFoodTags() == null) {
             return new ResponseEntity<>("Invalid JSON passed!", HttpStatus.BAD_REQUEST);
         }
