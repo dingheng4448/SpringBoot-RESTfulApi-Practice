@@ -5,19 +5,21 @@
     <title>API Documentation</title>
 </head>
 <body>
-<h2>Endpoint: /randomfood</h2>
+<h2>Endpoint: /api/randomfood</h2>
 <p>Request Type: POST</p>
 <p>Description: Retrieves random food based on given tags.</p>
 <p>Example: { "foodTags": ["Chicken", "Local"] }</p>
-<p>Response Code 200 - OK: Everything worked as expected. Random food is returned in JSON.</p>
+<p>Response Code 200 - OK: Everything worked as expected. Random food is returned in JSON. Returns
+    { id: 1, foodName: "Chicken Rice", tags: "Chicken,Asian,Chinese,Local" }</p>
 <p>Response Code 400 - BAD REQUEST: Invalid JSON passed.</p>
 <p>Response Code 404 - NOT FOUND: No food found with the given tags.</p>
 
-<h2>Endpoint: /save/food</h2>
+<h2>Endpoint: /api/save/food</h2>
 <p>Request Type: POST</p>
 <p>Description: Saves a new food into the repository.</p>
 <p>Example: { "foodName": "Chicken Rice", "tags": "Chicken,Asian,Chinese,Local" }</p>
-<p>Response Code 200 - OK: Everything worked as expected. Food is saved into repository.</p>
+<p>Response Code 200 - OK: Everything worked as expected. Food is saved into repository. Returns "Food successfully
+    saved to repository!"</p>
 <p>Response Code 400 - BAD REQUEST: Invalid JSON passed.</p>
 </body>
 </html>
